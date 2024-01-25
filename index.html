@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>MailerLite | Library</title>
+    <meta name="description" content="Welcome to our library.">
+    <meta property="og:site_name" content="MailerLibrary">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="MailerLibrary">
+    <meta property="og:description" content="Welcome to our library.">
+    <meta property="og:image" content="https://www.mailersend.com/img/asset/c29jaWFsX2ltYWdlcy90cmFuc2FjdGlvbmFsLW1lc3NhZ2luZy1zZXJ2aWNlLXRoYXQtZGVsaXZlcnMtb2cucG5n?w=1200&amp;h=630&amp;fit=crop&amp;s=eeb15871b0dcdf75c1dc9fa27170797e">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_package/">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_package/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_package/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_package/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="navbar shadow border-b">
+
+        <div class="container flex flex-wrap items-center justify-between">
+            <div class="width-8">
+                <a href="#">
+                    <img class="h-8" src="assets/logo.svg" alt="MailerLibrary">
+                </a>
+            </div>
+        
+            <ul class="nav-mobile"> <!-- Responsive menu - I decided to NOT do it since I wouldn't built in with pure CSS so that wouldn't be actual representation of what I'd do. My understanding is that I can't use scripts here too. Of course, real mobile menu would be just like on actual mailsend site. -->
+                <li>
+                    <button type="button" class="py-7 pl-4 pr-0 mobile-menu-button">
+                        <svg class="w-5 h-5 " fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" style="display: none;"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"></path></svg>
+                    </button>
+                </li>
+            </ul>
+        
+            <div class="nav-links-wrapper"> <!-- Nav links -->
+                <ul class="nav-links-list items-center vis-mobile">
+                    <li class="py-9 ml-5 mr-8 ml-8">
+                        <a href="#collection" class="nav-link font-small text-caps inline-flex items-center text-black cursor-pointer">
+                            Collection
+                        </a>
+                    </li>
+                    <li class="py-9 mr-8 ml-8">
+                        <a href="#testimonials" class="nav-link font-small text-caps inline-flex items-center text-black cursor-pointer">
+                            Reviews
+                        </a>
+                    </li>
+                    <li class="py-9 mr-8 ml-8">
+                        <a href="#faq" class="nav-link text-caps font-small inline-flex items-center text-black cursor-pointer">
+                            Common questions
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Cart -->
+            <div class="width-8 flex flex-row justify-end nav-links-wrapper nav-desktop"> 
+                <a href="" class="font-semibold text-caps font-small inline-flex items-center text-black cursor-pointer">
+                    Cart (0)
+                </a>
+            </div>
+    </div>
+
+</header>
+
+<main>
+
+    <!-- Hero -->
+    <section class="mt-20">
+
+        <div class="container">
+
+            <div>
+
+                <div class="hero-wrapper flex flex-col items-start gap-4">
+
+                    <a href="#collection" class="arrow-link-wrapper-big flex flex-row row-to-col center-to-left gap-4 cursor-pointer">
+                        <h1 class="learn outline white text-caps">Learn</h1>
+                        <img src="assets/marketing.jpg">
+                        <div class="arrow-text flex flex-row items-center gap-5">
+                            <img class="arrow-big" src="assets/arrow-big.svg">
+                            <h1 class="text-bg-green text-caps">Marketing</h1>
+                        </div>
+                    </a>
+                    
+                    <a href="#collection" class="arrow-link-wrapper-big flex flex-row row-to-col center-to-left gap-4 cursor-pointer">
+                        <img src="assets/automation.jpg">
+                        <div class="arrow-text flex flex-row items-center gap-5">
+                            <img class="arrow-big" src="assets/arrow-big.svg">
+                            <h1 class="text-bg-green text-caps">Automation</h1>
+                        </div>
+                    </a>
+                    
+                    <a href="#collection" class="arrow-link-wrapper-big flex flex-row row-to-col center-to-left gap-4 cursor-pointer">
+                        <div id="websites"  class="arrow-text flex flex-row center-to-left gap-5">
+                            <img class="arrow-big" src="assets/arrow-big.svg">
+                            <h1 class="text-bg-green text-caps">Websites</h1>
+                            <img class="image-move" src="assets/websites.jpg">
+                        </div>
+                    </a>
+
+                    <a href="#collection" class="arrow-link-wrapper-big flex flex-row row-to-col center-to-left gap-4 cursor-pointer">
+                        <img src="assets/ecom.jpg">
+                        <div class="arrow-text flex flex-row items-center gap-5">
+                            <img class="arrow-big" src="assets/arrow-big.svg">
+                            <h1 class="text-bg-green text-caps">Ecom</h1>
+                        </div>
+                    </a>
+
+           
+                    <!-- Link to collection -->
+                    <div class="flex flex-row justify-between items-center w-full pt-20 row-to-col center-to-left ">
+                        <div class="flex flex-row gap-2">
+                            <img src="assets/arrow-small.svg">
+                            <a href="#collection" class="arrow-link text-bg-green-small">Explore collection</a>
+                        </div>
+                        <div class="flex flex-row gap-6 vis-desktop">
+                            <a href="" class="text-sm text-caps">X</a>
+                            <a href="" class="text-sm text-caps">Instagram</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Collection -->
+    <section id="collection">
+        <div class="container">
+            <div class="flex flex-col ">
+
+            <h2>Featuring</h2>
+                
+            </div>
+        </div>
+
+        <!-- Product grid -->
+        <div class="grid grid-cols-4 gap-2 row-gap-4 justify-between mt-10 mobile-flex-col pr-4 pl-4">
+
+            <!-- Single product -->
+            <div class="flex flex-wrap flex-nowrap flex-col items-center product-card">
+
+                <div class="flex flex-col book">
+                    <a href="" class="flex flex-col items-center book-bg cursor-pointer">
+                    <img src="assets/book covers/buy-ology.jpg" class="book-cover">
+                    <div class="book-cta text-caps flex flex-row items-center gap-2">
+                        <img src="assets/Add.svg">
+                        Add to cart</div>
+                    </a>
+                    <div class="flex flex-col items-center justify-between">
+                        <div class="flex flex-col items-center gap-1">
+                            <h3 class="font-bold font-small text-center">Buyology: Truth and Lies About Why We Buy</h3>
+                            <p class="text-center text-caps font-smallx">by Martin Lindstrom</p>
+                        </div>
+                        <!-- Price - Sale -->
+                    <div class="flex flex-row flex-wrap flex-nowrap gap-1 mt-4">
+                        <p class="font-bold price-sale">$18.99</p>
+                        <p class="strikethrough opacity-60">$24.99</p>
+                    </div>
+                    </div>
+                 </div>
+                
+            </div>
+
+            <!-- Single product -->
+            <div class="flex flex-wrap flex-nowrap flex-col items-center product-card">
+                
+                <div class="flex flex-col book">
+                    <a href="" class="flex flex-col items-center book-bg cursor-pointer">
+                    <img src="assets/book covers/epic-content-marketing.jpg" class="book-cover">
+                    <div class="book-cta text-caps flex flex-row items-center gap-2">
+                        <img src="assets/Add.svg">
+                        Add to cart</div>
+                    </a>
+                    <div class="flex flex-col items-center justify-between">
+                        <div class="flex flex-col items-center gap-1">
+                            <h3 class="font-bold font-small text-center">Epic Content Marketing: Second Edition</h3>
+                            <p class="text-center text-caps font-smallx">by Joe Pullizzi</p>
+                        </div>
+
+                    <!-- Price - Default -->
+                    <div class="flex flex-col gap-2 mt-4 items-center">
+                        <p class="font-bold text-center">$24.78</p>
+                    </div>
+                    </div>
+                 </div>
+                
+            </div>
+
+            <!-- Single product -->
+            <div class="flex flex-wrap flex-nowrap flex-col items-center product-card">
+
+                <div class="flex flex-col book">
+                    <a href="" class="flex flex-col items-center book-bg cursor-pointer">
+                    <img src="assets/book covers/The-Anatomy-of-Buzz.jpg" class="book-cover">
+                    <div class="book-cta text-caps flex flex-row items-center gap-2">
+                        <img src="assets/Add.svg">
+                        Add to cart</div>
+                    </a>
+                    <div class="flex flex-col items-center justify-between">
+                        <div class="flex flex-col items-center gap-1">
+                            <h3 class="font-bold font-small text-center">The Anatomy of Buzz</h3>
+                            <p class="text-center text-caps font-smallx">by Emanuel Rosen</p>
+                        </div>
+                        <!-- Price - Sale -->
+                    <div class="flex flex-row flex-wrap flex-nowrap gap-1 mt-4">
+                        <p class="font-bold price-sale">$44.25</p>
+                        <p class="strikethrough opacity-60">$70.89</p>
+                    </div>
+                    </div>
+                 </div>
+                
+            </div>
+
+            <!-- Single product -->
+            <div class="flex flex-wrap flex-nowrap flex-col items-center product-card">
+                
+                <div class="flex flex-col book">
+                    <a href="" class="flex flex-col items-center book-bg cursor-pointer">
+                    <img src="assets/book covers/Conversion-Optimization.jpg" class="book-cover">
+                    <div class="book-cta text-caps flex flex-row items-center gap-2">
+                        <img src="assets/Add.svg">
+                        Add to cart</div>
+                    </a>
+                    <div class="flex flex-col items-center justify-between">
+                        <div class="flex flex-col items-center gap-1">
+                            <h3 class="font-bold font-small text-center">Conversion Optimization</h3>
+                            <p class="text-center text-caps font-smallx">by Khalid Saleh & Ayat Shukairy</p>
+                        </div>
+
+                    <!-- Price - Default -->
+                    <div class="flex flex-col gap-2 mt-4 items-center">
+                        <p class="font-bold text-center">$20,99</p>
+                    </div>
+                    </div>
+                 </div>
+                
+            </div>
+        
+            <!-- Single product -->
+            <div class="flex flex-wrap flex-nowrap flex-col items-center product-card">
+
+                <div class="flex flex-col book">
+                    <a href="" class="flex flex-col items-center book-bg cursor-pointer">
+                    <img src="assets/book covers/The-Innovators-Hypothesis.jpg" class="book-cover">
+                    <div class="book-cta text-caps flex flex-row items-center gap-2">
+                        <img src="assets/Add.svg">
+                        Add to cart</div>
+                    </a>
+                    <div class="flex flex-col items-center justify-between">
+                        <div class="flex flex-col items-center gap-1">
+                            <h3 class="font-bold font-small text-center">The Innovator’s Hypothesis</h3>
+                            <p class="text-center text-caps font-smallx">By Michael Schrage</p>
+                        </div>
+                        <!-- Price - Default -->
+                    <div class="flex flex-col gap-2 mt-4 items-center">
+                        <p class="font-bold text-center">$14.99</p>
+                    </div>
+                    </div>
+                 </div>
+                
+            </div>
+
+            <!-- Single product -->
+            <div class="flex flex-wrap flex-nowrap flex-col items-center product-card">
+                
+                <div class="flex flex-col book">
+                    <a href="" class="flex flex-col items-center book-bg cursor-pointer">
+                    <img src="assets/book covers/The Drunkards-Walk.jpg" class="book-cover">
+                    <div class="book-cta text-caps flex flex-row items-center gap-2">
+                        <img src="assets/Add.svg">
+                        Add to cart</div>
+                    </a>
+                    <div class="flex flex-col items-center justify-between">
+                        <div class="flex flex-col items-center gap-1">
+                            <h3 class="font-bold font-small text-center">The Drunkard’s Walk</h3>
+                            <p class="text-center text-caps font-smallx">By Leonard Mlodinow</p>
+                        </div>
+
+                     <!-- Price - Sale -->
+                     <div class="flex flex-row flex-wrap flex-nowrap gap-1 mt-4">
+                        <p class="font-bold price-sale">$13.10</p>
+                        <p class="strikethrough opacity-60">$20.96</p>
+                    </div>
+                    </div>
+                 </div>
+                
+            </div>
+
+            <!-- Single product -->
+            <div class="flex flex-wrap flex-nowrap flex-col items-center product-card">
+
+                <div class="flex flex-col book">
+                    <a href="" class="flex flex-col items-center book-bg cursor-pointer">
+                    <img src="assets/book covers/one-click.jpg" class="book-cover">
+                    <div class="book-cta text-caps flex flex-row items-center gap-2">
+                        <img src="assets/Add.svg">
+                        Add to cart</div>
+                    </a>
+                    <div class="flex flex-col items-center justify-between">
+                        <div class="flex flex-col items-center gap-1">
+                            <h3 class="font-bold font-small text-center">One Click</h3>
+                            <p class="text-center text-caps font-smallx">by Emanuel Rosen</p>
+                        </div>
+                        <!-- Price - Default -->
+                    <div class="flex flex-col gap-2 mt-4 items-center">
+                        <p class="font-bold text-center">$14.99</p>
+                    </div>
+                    </div>
+                 </div>
+                
+            </div>
+
+            <!-- Single product -->
+            <div class="flex flex-wrap flex-nowrap flex-col items-center product-card">
+                
+                <div class="flex flex-col book">
+                    <a href="" class="flex flex-col items-center book-bg cursor-pointer">
+                    <img src="assets/book covers/Lean Analytics.jpg" class="book-cover">
+                    <div class="book-cta text-caps flex flex-row items-center gap-2">
+                        <img src="assets/Add.svg">
+                        Add to cart</div>
+                    </a>
+                    <div class="flex flex-col items-center justify-between">
+                        <div class="flex flex-col items-center gap-1">
+                            <h3 class="font-bold font-small text-center">Lean Analytics</h3>
+                            <p class="text-center text-caps font-smallx">By Alistair Croll and Benjamin Yoskovitz</p>
+                        </div>
+
+                    <!-- Price - Default -->
+                    <div class="flex flex-col gap-2 mt-4 items-center">
+                        <p class="font-bold text-center">$68.90</p>
+                    </div>
+                    </div>
+                 </div>
+                
+            </div>
+        
+            <!-- Single product -->
+            <div class="flex flex-wrap flex-nowrap flex-col items-center product-card">
+
+                <div class="flex flex-col book">
+                    <a href="" class="flex flex-col items-center book-bg cursor-pointer">
+                    <img src="assets/book covers/The 1-Page Marketing Plan.png" class="book-cover">
+                    <div class="book-cta text-caps flex flex-row items-center gap-2">
+                        <img src="assets/Add.svg">
+                        Add to cart</div>
+                    </a>
+                    <div class="flex flex-col items-center justify-between">
+                        <div class="flex flex-col items-center gap-1">
+                            <h3 class="font-bold font-small text-center">The 1-Page Marketing Plan</h3>
+                            <p class="text-center text-caps font-smallx">by Allan Dib</p>
+                        </div>
+                        <!-- Price - Default -->
+                    <div class="flex flex-col gap-2 mt-4 items-center">
+                        <p class="font-bold text-center">$15.65</p>
+                    </div>
+                    </div>
+                 </div>
+                
+            </div>
+            <!-- Single product -->
+            <div class="flex flex-wrap flex-nowrap flex-col items-center product-card">
+
+                <div class="flex flex-col book">
+                    <a href="" class="flex flex-col items-center book-bg cursor-pointer">
+                    <img src="assets/book covers/The-Innovators-Hypothesis.jpg" class="book-cover">
+                    <div class="book-cta text-caps flex flex-row items-center gap-2">
+                        <img src="assets/Add.svg">
+                        Add to cart</div>
+                    </a>
+                    <div class="flex flex-col items-center justify-between">
+                        <div class="flex flex-col items-center gap-1">
+                            <h3 class="font-bold font-small text-center">The Innovator’s Hypothesis</h3>
+                            <p class="text-center text-caps font-smallx">By Michael Schrage</p>
+                        </div>
+                        <!-- Price - Default -->
+                    <div class="flex flex-col gap-2 mt-4 items-center">
+                        <p class="font-bold text-center">$14.99</p>
+                    </div>
+                    </div>
+                 </div>
+                
+            </div>
+            
+
+
+        
+                
+        </div>
+        
+                
+        
+
+
+    </section>
+
+    <section>
+        <div class="marquee">
+            <div class="marquee-content scroll items-end">
+                <h1 class="future-title outline white text-caps">Read Different</h1>
+                <div class="flex flex-col h-full justify-end pb-9">
+                    <img class="bookshelf" src="assets/bookshelf-transparent-cropped.png">
+                </div>
+            </div>
+            <div class="marquee-content scroll items-end">
+                <h1 class="future-title outline white text-caps">Read Different</h1>
+                <div class="flex flex-col h-full justify-end pb-9">
+                    <img class="bookshelf" src="assets/bookshelf-transparent-cropped.png">
+                </div>
+            </div> 
+            <div class="marquee-content scroll items-end">
+                    <h1 class="future-title outline white text-caps">Read Different</h1>
+                    <div class="flex flex-col h-full justify-end pb-9">
+                        <img class="bookshelf" src="assets/bookshelf-transparent-cropped.png">
+                    </div>
+            </div>
+        </div>
+        
+        <!-- Reviews -->
+        <div id="testimonials" class="reviews-wrapper">
+            <div class="marquee pl-4">
+                <div class="marquee-content scroll items-start">
+                    <h1 class="future-title outline green text-caps">Think Different</h1>
+                    <div class="flex flex-col h-full justify-start pt-2">
+                        <img class="page" src="assets/page-transparent.png">
+                    </div>
+                </div>
+                <div class="marquee-content scroll items-start">
+                    <h1 class="future-title outline green text-caps">Think Different</h1>
+                    <div class="flex flex-col h-full justify-start pt-2">
+                        <img class="page" src="assets/page-transparent.png">
+                    </div>
+                </div>
+                <div class="marquee-content scroll items-start">
+                    <h1 class="future-title outline green text-caps">Think Different</h1>
+                    <div class="flex flex-col h-full justify-start pt-2">
+                        <img class="page" src="assets/page-transparent.png">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container mt-20">
+                <h2 class="mb-12">Reviews</h2>
+            </div>
+            <div class="grid grid-cols-3 gap-2 pl-4 pr-4 pb-24">
+                <!-- Single review -->
+                <div class="flex flex-col justify-between items-start single-review gap-20" style="
+                background-color: #201DC2;
+                color: #2EE8F5;">
+                    <div>
+                        <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_447_1646)">
+                            <path d="M9.666 34.642C7.606 32.454 6.5 30 6.5 26.022C6.5 19.022 11.414 12.748 18.56 9.646L20.346 12.402C13.676 16.01 12.372 20.692 11.852 23.644C12.926 23.088 14.332 22.894 15.71 23.022C19.318 23.356 22.162 26.318 22.162 30C22.162 31.8565 21.4245 33.637 20.1117 34.9497C18.799 36.2625 17.0185 37 15.162 37C13.016 37 10.964 36.02 9.666 34.642ZM29.666 34.642C27.606 32.454 26.5 30 26.5 26.022C26.5 19.022 31.414 12.748 38.56 9.646L40.346 12.402C33.676 16.01 32.372 20.692 31.852 23.644C32.926 23.088 34.332 22.894 35.71 23.022C39.318 23.356 42.162 26.318 42.162 30C42.162 31.8565 41.4245 33.637 40.1118 34.9497C38.799 36.2625 37.0185 37 35.162 37C33.016 37 30.964 36.02 29.666 34.642Z" fill="#2EE8F5"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_447_1646">
+                            <rect width="48" height="48" fill="#2EE8F5" transform="translate(0.5)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                        <h3 class="review-quote text-caps font-bold">
+                            From Confused to Confident: How just Few Books on Email Marketing Changed My Professional Life
+                        </h3>
+                        <p class="font-small mt-4">
+                            I was pretty lost in the world of email marketing, often overwhelmed by the jargon and strategies. That changed when I stumbled upon this library's extensive collection on the subject. Each book I read was like a lightbulb moment, turning complex concepts into understandable, actionable strategies. It's not just about the theory; the real-life examples and case studies provided practical insights that I could immediately apply to my work. This library has been an invaluable resource in boosting my confidence and skills in email marketing.
+                        </p>
+                    </div>
+                    <div class="flex flex-row justify-between items-center self-stretch">
+                        <img class="author_img" src="assets/review authors/John.jpeg">
+                        <div class="flex flex-col justify-end items-end self-stretch">
+                            <p class="font-semibold text-sm">John</p>
+                            <div class="flex flex-row gap-4">
+                                <a href="" class="text-sm text-caps">X</a>
+                                <a href="" class="text-sm text-caps">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single review -->
+                <div class="flex flex-col justify-between items-start single-review gap-20" style="
+                background-color: #6B2737;
+                color: #FDE6EB;">
+                    <div>
+                        <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_317_4286)">
+                            <path d="M9.666 34.642C7.606 32.454 6.5 30 6.5 26.022C6.5 19.022 11.414 12.748 18.56 9.646L20.346 12.402C13.676 16.01 12.372 20.692 11.852 23.644C12.926 23.088 14.332 22.894 15.71 23.022C19.318 23.356 22.162 26.318 22.162 30C22.162 31.8565 21.4245 33.637 20.1117 34.9497C18.799 36.2625 17.0185 37 15.162 37C13.016 37 10.964 36.02 9.666 34.642ZM29.666 34.642C27.606 32.454 26.5 30 26.5 26.022C26.5 19.022 31.414 12.748 38.56 9.646L40.346 12.402C33.676 16.01 32.372 20.692 31.852 23.644C32.926 23.088 34.332 22.894 35.71 23.022C39.318 23.356 42.162 26.318 42.162 30C42.162 31.8565 41.4245 33.637 40.1118 34.9497C38.799 36.2625 37.0185 37 35.162 37C33.016 37 30.964 36.02 29.666 34.642Z" fill="#FDE6EB"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_317_4286">
+                            <rect width="48" height="48" fill="white" transform="translate(0.5)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                        <h3 class="review-quote text-caps font-bold">
+                            A Journey from Novice to Expert: The Role of These Insightful Books in My Email Marketing Skills
+                        </h3>
+                        <p class="font-small mt-4">
+                            Never would I have imagined that I could grasp the nuances of email marketing so thoroughly until I explored the resources in this library. The books here are more than just informative; they're transformative. They guided me from being a complete novice to someone who now feels adept in email marketing.
+                        </p>
+                    </div>
+                    <div class="flex flex-row justify-between items-center self-stretch">
+                        <img class="author_img" src="assets/review authors/Cesar.jpeg">
+                        <div class="flex flex-col justify-end items-end self-stretch">
+                            <p class="font-semibold text-sm">Cesar</p>
+                            <div class="flex flex-row gap-4">
+                                <a href="" class="text-sm text-caps">X</a>
+                                <a href="" class="text-sm text-caps">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single review -->
+                <div class="flex flex-col justify-between items-start single-review gap-20" style="
+                background-color: #66D7D1;
+                color: #084D4A;">
+                    <div>
+                        <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_459_578)">
+                            <path d="M9.666 34.642C7.606 32.454 6.5 30 6.5 26.022C6.5 19.022 11.414 12.748 18.56 9.646L20.346 12.402C13.676 16.01 12.372 20.692 11.852 23.644C12.926 23.088 14.332 22.894 15.71 23.022C19.318 23.356 22.162 26.318 22.162 30C22.162 31.8565 21.4245 33.637 20.1117 34.9497C18.799 36.2625 17.0185 37 15.162 37C13.016 37 10.964 36.02 9.666 34.642ZM29.666 34.642C27.606 32.454 26.5 30 26.5 26.022C26.5 19.022 31.414 12.748 38.56 9.646L40.346 12.402C33.676 16.01 32.372 20.692 31.852 23.644C32.926 23.088 34.332 22.894 35.71 23.022C39.318 23.356 42.162 26.318 42.162 30C42.162 31.8565 41.4245 33.637 40.1118 34.9497C38.799 36.2625 37.0185 37 35.162 37C33.016 37 30.964 36.02 29.666 34.642Z" fill="#084D4A"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_459_578">
+                            <rect width="48" height="48" fill="white" transform="translate(0.5)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                        <h3 class="review-quote text-caps font-bold">
+                            Building Websites Made Easy: How This Library's Collection Turned Me into a Web Wizard
+                        </h3>
+                        <p class="font-small mt-4">
+                            I always thought website creation was beyond my reach until I dived into these books. Each one was a treasure trove of insights about website design, user-friendly forms, and overall best practices. What really stood out was how they simplified complex concepts. Whether it was about creating engaging layouts or optimizing forms for conversions, these books had it all. Now, I'm confidently building websites that not only look great but are also user-centric. I owe a huge part of this transformation to these incredible resources.
+                        </p>
+                    </div>
+                    <div class="flex flex-row justify-between items-center self-stretch">
+                        <img class="author_img" src="assets/review authors/Adele.jpeg">
+                        <div class="flex flex-col justify-end items-end self-stretch">
+                            <p class="font-semibold text-sm">Adele</p>
+                            <div class="flex flex-row gap-4">
+                                <a href="" class="text-sm text-caps">X</a>
+                                <a href="" class="text-sm text-caps">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single review -->
+                <div class="flex flex-col justify-between items-start single-review gap-20" style="
+                background-color: #F6D360;
+                color: #574302;">
+                    <div>
+                        <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_459_408)">
+                            <path d="M9.666 34.642C7.606 32.454 6.5 30 6.5 26.022C6.5 19.022 11.414 12.748 18.56 9.646L20.346 12.402C13.676 16.01 12.372 20.692 11.852 23.644C12.926 23.088 14.332 22.894 15.71 23.022C19.318 23.356 22.162 26.318 22.162 30C22.162 31.8565 21.4245 33.637 20.1117 34.9497C18.799 36.2625 17.0185 37 15.162 37C13.016 37 10.964 36.02 9.666 34.642ZM29.666 34.642C27.606 32.454 26.5 30 26.5 26.022C26.5 19.022 31.414 12.748 38.56 9.646L40.346 12.402C33.676 16.01 32.372 20.692 31.852 23.644C32.926 23.088 34.332 22.894 35.71 23.022C39.318 23.356 42.162 26.318 42.162 30C42.162 31.8565 41.4245 33.637 40.1118 34.9497C38.799 36.2625 37.0185 37 35.162 37C33.016 37 30.964 36.02 29.666 34.642Z" fill="#574302"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_459_408">
+                            <rect width="48" height="48" fill="white" transform="translate(0.5)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                            
+                        <h3 class="review-quote text-caps font-bold">Automating Emails Like a Pro: The Books That Took My Marketing Skills to the Next Level</h3>
+                        <p class="font-small mt-4">
+                            As someone who juggles multiple marketing tasks, email automation always seemed daunting. But the books I found here changed all that. They broke down the process into manageable steps, from selecting the right tools to crafting automated sequences.    
+                        </p>
+                    </div>
+                    <div class="flex flex-row justify-between items-center self-stretch">
+                        <img class="author_img" src="assets/review authors/Mark.jpeg">
+                        <div class="flex flex-col justify-end items-end self-stretch">
+                            <p class="font-semibold text-sm">Mark</p>
+                            <div class="flex flex-row gap-4">
+                                <a href="" class="text-sm text-caps">X</a>
+                                <a href="" class="text-sm text-caps">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single review -->
+                <div class="flex flex-col justify-between items-start single-review gap-20" style="
+                background-color: #6B6570;
+                color: #EDDCFA;">
+                    <div>
+                        <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_471_1584)">
+                            <path d="M9.33275 34.642C7.27275 32.454 6.16675 30 6.16675 26.022C6.16675 19.022 11.0807 12.748 18.2267 9.646L20.0128 12.402C13.3427 16.01 12.0387 20.692 11.5187 23.644C12.5927 23.088 13.9987 22.894 15.3767 23.022C18.9847 23.356 21.8288 26.318 21.8288 30C21.8288 31.8565 21.0913 33.637 19.7785 34.9497C18.4657 36.2625 16.6853 37 14.8287 37C12.6827 37 10.6307 36.02 9.33275 34.642ZM29.3328 34.642C27.2728 32.454 26.1668 30 26.1668 26.022C26.1668 19.022 31.0808 12.748 38.2268 9.646L40.0128 12.402C33.3428 16.01 32.0388 20.692 31.5188 23.644C32.5928 23.088 33.9988 22.894 35.3768 23.022C38.9848 23.356 41.8288 26.318 41.8288 30C41.8288 31.8565 41.0913 33.637 39.7785 34.9497C38.4657 36.2625 36.6853 37 34.8288 37C32.6828 37 30.6308 36.02 29.3328 34.642Z" fill="#EDDCFA"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_471_1584">
+                            <rect width="48" height="48" fill="white" transform="translate(0.166748)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                            
+                        <h3 class="review-quote text-caps font-bold">I Unlocked E-COM: How One Book Opened the Door to Online Business Success</h3>
+                        <p class="font-small mt-4">
+                            I was a complete novice in the world of e-commerce, but one book from this collection changed everything. It guided me through every aspect of setting up and running an online store, from choosing platforms to understanding customer psychology.
+                        </p>
+                    </div>
+                    <div class="flex flex-row justify-between items-center self-stretch">
+                        <img class="author_img" src="assets/review authors/Marta.jpeg">
+                        <div class="flex flex-col justify-end items-end self-stretch">
+                            <p class="font-semibold text-sm">Marta</p>
+                            <div class="flex flex-row gap-2">
+                                <a href="" class="text-sm text-caps">X</a>
+                                <a href="" class="text-sm text-caps">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single review -->
+                <div class="flex flex-col justify-between items-start single-review gap-20" style="
+                background-color: #F9ADA0;
+                color: #64190C;">
+                    <div>
+                        <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_471_1749)">
+                            <path d="M9.9995 34.642C7.9395 32.454 6.8335 30 6.8335 26.022C6.8335 19.022 11.7475 12.748 18.8935 9.646L20.6795 12.402C14.0095 16.01 12.7055 20.692 12.1855 23.644C13.2595 23.088 14.6655 22.894 16.0435 23.022C19.6515 23.356 22.4955 26.318 22.4955 30C22.4955 31.8565 21.758 33.637 20.4452 34.9497C19.1325 36.2625 17.352 37 15.4955 37C13.3495 37 11.2975 36.02 9.9995 34.642ZM29.9995 34.642C27.9395 32.454 26.8335 30 26.8335 26.022C26.8335 19.022 31.7475 12.748 38.8935 9.646L40.6795 12.402C34.0095 16.01 32.7055 20.692 32.1855 23.644C33.2595 23.088 34.6655 22.894 36.0435 23.022C39.6515 23.356 42.4955 26.318 42.4955 30C42.4955 31.8565 41.758 33.637 40.4452 34.9497C39.1325 36.2625 37.352 37 35.4955 37C33.3495 37 31.2975 36.02 29.9995 34.642Z" fill="#64190C"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_471_1749">
+                            <rect width="48" height="48" fill="white" transform="translate(0.833496)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                            
+                        <h3 class="review-quote text-caps font-bold">Designing Websites That Wow: A Book That Transformed My Approach to Web Design</h3>
+                        <p class="font-small mt-4">
+                            As a web designer always looking to improve, this book was a goldmine. It covered everything from basic design principles to the latest trends in user experience. The examples and case studies were especially helpful, providing real-world applications of the concepts.   
+                        </p>
+                    </div>
+                    <div class="flex flex-row justify-between items-center self-stretch">
+                        <img class="author_img" src="assets/review authors/Daniel.jpeg">
+                        <div class="flex flex-col justify-end items-end self-stretch">
+                            <p class="font-semibold text-sm">Daniel</p>
+                            <div class="flex flex-row gap-2">
+                                <a href="" class="text-sm text-caps">X</a>
+                                <a href="" class="text-sm text-caps">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- Common questions -->
+    <section id="faq">
+
+        <div class="container">
+
+            <div class="common-questions">
+                <h2 class="mb-12">Common questions</h2>
+
+                <!-- Questions section -->
+                <div class="grid grid-cols-2 gap-20 mb-12">
+
+                    <div>
+                        <!-- Single question -->
+                        <div class="flex items-start pt-2">
+                            <h3 class="faq-title font-bold flex items-center">Books</h3>
+                        </div>
+
+                    </div>
+    
+                    <div>
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">How often are new books added to the collection?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">Can I suggest books for the library to acquire?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">Are there e-books or audiobooks available as well?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    
+    
+                </div>
+
+                <!-- Questions section -->
+                <div class="grid grid-cols-2 gap-20 mb-12">
+
+                    <div>
+                        <!-- Single question -->
+                        <div class="flex items-start pt-2">
+                            <h3 class="faq-title font-bold flex items-center">Payment</h3>
+                        </div>
+
+                    </div>
+    
+                    <div>
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">Do you offer any bundles or discounts?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">What payment methods are accepted?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">Do you offer any installment or deferred payment options?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">Are there any additional fees or charges for online payment?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    
+    
+                </div>
+
+                <!-- Questions section -->
+                <div class="grid grid-cols-2 gap-20">
+
+                    <div>
+                        <!-- Single question -->
+                        <div class="flex items-start pt-2">
+                            <h3 class="faq-title font-bold flex items-center">Return/Exchange</h3>
+                        </div>
+
+                    </div>
+    
+                    <div>
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">Is there a return or exchange policy?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">How long do I have to return or exchange a book?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">How long do I have to return or exchange a book?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">Are there any conditions for a book to be eligible?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single question -->
+                        <div>
+                            <div class="border-b-2">
+                                <div class="-mx-6 transition-all ease-in-out bg-secondary rounded-md">
+                                    <a class="flex flex-1 flex-grow-0 gap-4 items-center justify-between px-6 py-5 qtitle">
+                                        <h4 class="text-lg font-semibold mb-0">Will I receive a full refund for a returned book?</h4>
+                                        <svg class="w-6 h-6 transition-all transform flex-none rotate-hover" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    
+    
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="container flex flex-col gap-10 mb-12">
+            <div>
+                <p class="text-lg font-semibold mb-2">Now is great time to get</p>
+            <h2 class="mb-12">A 10% discount</h2>
+            </div>
+
+            <div>
+                <form id="suggest-form" class="relative flex flex-row"><input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                    <input type="hidden" name="_token" value="">
+                        <div class="w-full">
+                            <input type="email" placeholder="Enter your email" name="email" id="email" value="" autocomplete="on" required="required" class="input fill-width">
+                        </div>
+                    <button type="submit" class="flex absolute email-btn">
+                        <img src="assets/arrow-big.svg"></button></form>
+                <div class="flex flex-row row-to-col w-full justify-between mt-4">
+                    <p class="font-smallx">Sign up for 10% discount and our weekly email marketing newsletter and MailerLibrary updates.</p>
+                    <span class="flex flex-row gap-1"><p class="font-smallx">For more details, review our</p> <a href="" class="font-smallx">Privacy Policy.</a></span>
+                </div>
+            </div>
+
+            <div class="flex flex-row gap-2 items-center">
+                <a href="https://twitter.com/mailerlite" target="_blank"><img src="assets/x.svg"></a>
+                <a href="https://www.youtube.com/channel/UCRWH1lQlbnqCrrYTfacklIQ" target="_blank"><img src="assets/youtube.svg"></a>
+                <a href="https://www.linkedin.com/company/mailerlite-international/" target="_blank"><img src="assets/linkedin.svg"></a>
+            </div>
+            
+        </div>
+    
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100-50 bg-opacity-50 pt-20 pb-6" id="footer">
+        <div class="container">
+            <div class="mt-12">
+                <div class="grid grid-cols-2 w-full">
+                    <div class="flex flex-col w-full">
+                        <p class="text-sm leading-6">© 2010 - 2024 MailerLibrary. All rights reserved.</p>
+                        <div class="flex flex-row row-to-col underline text-sm leading-6 mt-1 gap-6">
+                            <div>
+                                <a href="">Terms of Service</a>
+                                <a href="" class="ml-8">Privacy Policy</a>
+                                <a href="" class="ml-8">Report abuse</a>
+                                <a href="" class="ml-8">Cookies Settings</a>
+                            </div>
+                        </div>
+                    </div>
+                            
+                        <div class="flex flex-col">
+                            <a href="" class="flex items-center text-gray-500 justify-end">
+                                <svg class="fill-current w-10 h-10 text-gray-500 group-hover:text-black-100" height="39" viewBox="0 0 39 39" width="39" xmlns="http://www.w3.org/2000/svg"><path d="m19.5 0 .632 2.045h2.045l-1.656 1.263.632 2.045-1.653-1.264-1.655 1.264.632-2.045-1.655-1.263h2.045z"></path><path d="m19.5 33.647.632 2.045h2.045l-1.654 1.264.63 2.044-1.653-1.263-1.655 1.263.632-2.044-1.655-1.264h2.045z"></path><path d="m27.911 3.059.631 2.041h2.045l-1.654 1.267.632 2.044-1.654-1.264-1.654 1.265.632-2.044-1.655-1.268h2.045z"></path><path d="m34.794 8.857.632 2.044h2.044l-1.654 1.264.632 2.044-1.654-1.263-1.654 1.264.632-2.044-1.655-1.266h2.044z"></path><path d="m34.794 25.235.631 2.045h2.045l-1.654 1.264.632 2.044-1.654-1.263-1.654 1.263.632-2.044-1.654-1.264h2.045z"></path><path d="m4.206 8.857.631 2.043h2.045l-1.654 1.266.632 2.044-1.654-1.263-1.654 1.263.632-2.044-1.655-1.266h2.045z"></path><path d="m36.324 16.824.631 2.045h2.045l-1.654 1.264.632 2.045-1.654-1.263-1.654 1.262.632-2.045-1.655-1.264h2.044z"></path><path d="m2.677 16.824.632 2.045h2.044l-1.653 1.263.632 2.045-1.655-1.263-1.655 1.263.632-2.045-1.654-1.263h2.045z"></path><path d="m4.206 25.235.631 2.045h2.045l-1.654 1.264.631 2.044-1.653-1.263-1.654 1.263.632-2.044-1.655-1.263h2.045z"></path><path d="m29.44 32.117.631 2.044h2.045l-1.655 1.264.632 2.044-1.653-1.262-1.654 1.263.632-2.044-1.654-1.264h2.045z"></path><path d="m11.088 3.059.631 2.041h2.045l-1.654 1.267.632 2.044-1.654-1.264-1.654 1.265.632-2.044-1.655-1.268h2.045z"></path><path d="m9.559 32.117.632 2.045h2.045l-1.654 1.263.632 2.045-1.655-1.263-1.654 1.263.632-2.045-1.654-1.262h2.044z"></path><path d="m22.875 18.385h.533a1.085 1.085 0 0 1 1.066 1.1v4.415a1.085 1.085 0 0 1 -1.065 1.1h-7.819a1.085 1.085 0 0 1 -1.066-1.1v-4.41a1.085 1.085 0 0 1 1.066-1.1h.533v-1.659a3.378 3.378 0 1 1 6.753 0zm-4.975-1.655v1.654h3.2v-1.654a1.6 1.6 0 1 0 -3.2 0z" fill-rule="evenodd"></path></svg>
+                                <div class="flex flex-col whitespace-nowrap ml-5">
+                                    <span class="text-base font-bold group-hover:text-black-100">
+                                    GDPR Compliant
+                                    </span>
+                                    <span class="text-sm group-hover:text-black-100">
+                                        Your data is safe with us
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</main>
+</body>
+</html>
